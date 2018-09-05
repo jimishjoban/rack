@@ -262,7 +262,7 @@ module Rack
       when Hash
         domain  = "; domain="  + value[:domain] if value[:domain]
         path    = "; path="    + value[:path]   if value[:path]
-        max_age = "; max-age=" + value[:max_age] if value[:max_age]
+        max_age = "; max-age=" + value[:max_age].to_s if value[:max_age]
         # There is an RFC mess in the area of date formatting for Cookies. Not
         # only are there contradicting RFCs and examples within RFC text, but
         # there are also numerous conflicting names of fields and partially
